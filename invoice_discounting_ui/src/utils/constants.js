@@ -1,4 +1,4 @@
 import abi from './InvoiceDiscounting.json'
 
-export const contractAddress = "0x46b0436a7940286B0fe32aD174DaB44BC530c8A0";
+export const contractAddress = "0x9dA46e0c2A7558De9850FD729b0dEfeB113d1c8a";
 export const contractABI = abi.abi;

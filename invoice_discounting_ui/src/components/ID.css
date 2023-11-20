@@ -1,0 +1,80 @@
+/* Add this to your CSS file or style section in your component */
+
+div {
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid #0a0a0a;
+    border-radius: 5px;
+    background-color: #eaf9f3;
+  
+  }
+  
+  h2 {
+    color: #333;
+  }
+  
+  label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  
+  input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+  }
+  
+  button {
+    background-color: #4c74af;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  p {
+    margin-top: 15px;
+    color: #333;
+    font-weight: bold;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+  }
+  
+  tr:hover {
+    background-color: #f5f5f5;
+  }
+  
+  /* p {
+    margin-top: 20px;
+    font-style: italic;
+    color: #777;
+  } */
+  
+  .error {
+    color: red;
+    margin-top: 20px;
+  }
+  

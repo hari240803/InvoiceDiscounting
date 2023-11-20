@@ -13,6 +13,7 @@ contract InvoiceDiscounting {
         address buyer;
         uint256 invoiceAmount;
         uint256 dueDate;
+        
         uint256 auctionEndTime;
         uint256 highestBid;
         address highestBidder;
@@ -104,4 +105,30 @@ contract InvoiceDiscounting {
     function getInvoiceCount() public view returns (uint256) {
         return invoices.length;
     }
+
+    function getInvoiceDetails(uint256 index) public view returns (
+    address supplier,
+    address buyer,
+    uint256 invoiceAmount,
+    uint256 dueDate,
+    uint256 auctionEndTime,
+    uint256 highestBid,
+    address highestBidder,
+    bool closed
+) {
+    require(index < invoices.length, "Invalid invoice index");
+
+    Invoice storage invoice = invoices[index];
+    return (
+        invoice.supplier,
+        invoice.buyer,
+        invoice.invoiceAmount,
+        invoice.dueDate,
+        invoice.auctionEndTime,
+        invoice.highestBid,
+        invoice.highestBidder,
+        invoice.closed
+    );
+}
+
 }
