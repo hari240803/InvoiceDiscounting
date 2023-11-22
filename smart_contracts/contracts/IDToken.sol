@@ -4,7 +4,7 @@ pragma solidity ^0.8.20;
 import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 
 contract IDToken is ERC20 {
-    constructor() ERC20("ID Coin", "QKC") {
+    constructor() ERC20("ID Coin", "IDC") {
         _mint(msg.sender, 10000 * 10 ** 18);
     }
 }

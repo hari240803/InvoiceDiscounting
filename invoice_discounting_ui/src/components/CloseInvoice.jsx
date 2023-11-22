@@ -3,22 +3,21 @@ import { InvoiceContext } from '../context/InvoiceContext';
 
 const CloseInvoice = () => {
   const [invoiceId,setInvoiceId] = useState('');
-  const [loading, setLoading] = useState(false);
+  // const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
   const {InvoicesContract}  = useContext(InvoiceContext)
 
   const handleCloseInvoice = async () => {
     try {
       setError('');
-      setLoading(true); 
+      // setLoading(true); 
   
       // Call the closeInvoiceAuction function on the smart contract
-      const tx = await InvoicesContract.closeInvoiceAuction(invoiceId,{ gasLimit: 2000000 });
+      const tx = await InvoicesContract.closeInvoiceAuction(invoiceId,{ gasLimit: 6000000 });
   
-      // Wait for the transaction to be mined
+     
       await tx.wait();
   
-      // Listen for the InvoiceClosed event
       InvoicesContract.once('InvoiceClosed', (invoiceId, highestBidder, supplierAmount) => {
         console.log('Invoice closed successfully');
         console.log('Invoice ID:', invoiceId);
@@ -37,7 +36,7 @@ const CloseInvoice = () => {
         setError(error.message);
       }
      
-        setLoading(false); // Set loading back to false after transaction processing
+        // setLoading(false); // Set loading back to false after transaction processing
      
     }
   };
